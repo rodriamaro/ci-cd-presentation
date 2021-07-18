@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Reveal Vite</title>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h3>Continuous Integration & Continuous Delivery in practice</h3>
+                    <p>
+                        <small>Rodrigo Amaro</small>
+                    </p>
+                    <p>
+                        <small>30/06/2021</small>
+                    </p>
+                </section>
+                <section>
+                    <h2>Hello!</h2>
+                    <p class="fragment">Soy Rodrigo Amaro y soy sansano</p>
+                    <p class="fragment">Entré a Telemática el 2005</p>
+                    <p class="fragment">Ahora trabajo en Mercado Libre como Technical Lead</p>
+
+                    <div id="right"></div>
+                </section>
+
+                <section>
+                    <h2>Continuous Integration??</h2>
+                </section>
+
+                <section>
+                    <h3>A little of history...</h3>
+                    <p class="fragment fade-right">.. a long long time ago
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <p>
+                            Pedrito era un desarrollador en el 2010, y trabajaba en una empresa que no 
+                                          usaba ningun tipo de
+                            <bold>source code management</bold>
+                        </p>
+                        <!-- 
+                                      Contar sobre como se desarrollaba antes sin GIT o SVN, y como 
+                                      pocas personas tocaba poco código, pero cuando una persona mas entraba al 
+                                      proyecto ya empezaban los problemas
+                                    -->
+                    </section>
+
+                    <section>
+                        <img src="./public/tenor.gif"/>
+                    </section>
+
+                    <section>
+                        <p>Historia basada en hechos reales...</p>
+                    </section>
+
+                    <section>
+                        <p>mmm.. this is a huge problem</p>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Continuous Integration</h3>
+                        <blockquote cite="www.martinfowler.com/articles/continuousIntegration.html.Preface">
+                            &ldquo;... a software development practice where members of a team integrate their work frequently, usually each person integrates at least
+                                          daily — leading to multiple integrations per day. Each integration is
+                                          verified by an automated build (including test) to detect integration
+                                          errors as quickly as possible. Many teams find that this approach
+                                          leads to significantly reduced integration problems and allows a team
+                                          to develop cohesive software more rapidly..&rdquo;
+                        </blockquote>
+                    </section>
+                    <section>
+                        <p>
+                          Todos los devs deben compilar el proyecto en sus propias máquinas antes de comitear su código al repositorio 
+                          para asegurarse que sus cambios no rompen nada
+                        </p>
+                        <img src="./public/build-is-broken.png" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>
+                          Los devs deben subir sus cambios al repositorio de código al menos una vez al día
+                        </p>
+                        <img src="./public/in-case-of-fire-1-git-commit-2-git-push-3-leave-building2.png" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>
+                          Compilaciones integradas ocurren varias veces al día en una máquina dedicada.
+                        </p>
+                        <img src="./public/hamster_running.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Todos los tests deben correr por cada build</p>
+                        <img src="./public/run-test-ruuuunnn.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Se genera un artefacto (ej:war) que puede ser testeado</p>
+                        <img src="./public/mom-throwing-baby.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Arreglar compilaciones rotas es la máxima prioridad</p>
+                        <img src="./public/59337eea30636.jpeg" width="500px"/> 
+                        <img />
+                    </section>
+                    <section>
+                        <p>Se pueden generar reportes anexos (coverage, code standards, security checks).</p>
+                        <img src="./public/You_Shall_Not_Pass!_0-1_screenshot.jpg" width="500px"/> 
+                    </section>
+                </section>
+                <section>
+                  <p>An overview</p>
+                  <p>
+                    <img src="./public/ci-book.png" /> 
+
+                  </p>
+                  <small style="font-size: small;">Source: Book <a href="https://www.amazon.com/-/es/Paul-M-Duvall/dp/0321336380">Continuous Integration: Improving Software Quality and Reducing Risk</a></small>
+                </section>
+                <section>
+                  <p>Version Control Repository</p>
+                  <p style="background-color: white;"> 
+                    <img src="./public/bitbucket-logo.png" style="margin-right: 30px; padding: 20px;" height="200px"/> 
+                    <img src="./public/github.png" style="padding: 20px;" height="200px"/> 
+                    <img src="./public/gitlab.png" height="200px"/> 
+                  </p>
+                </section>
+                <section data-background-iframe="https://github.com/rodriamaro/ci-cd-presentation" data-background-interactive> </section>
+
+                <section>
+                  <p>CI Servers</p>
+                  <p> 
+                    <img src="./public/ci_servers.png" height="320px"/>
+                  </p>
+                </section>
+                <section data-background-iframe="https://github.com/expressjs/express/pulls" data-background-interactive> </section>
+
+
+            </div>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
