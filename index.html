@@ -20,15 +20,17 @@
                 </section>
                 <section>
                     <h2>Hello!</h2>
-                    <p class="fragment">Soy Rodrigo Amaro y soy sansano</p>
-                    <p class="fragment">Entré a Telemática el 2005</p>
-                    <p class="fragment">Ahora trabajo en Mercado Libre como Technical Lead</p>
-
-                    <div id="right"></div>
+                    <p class="fragment">Soy Rodrigo Amaro</p>
+                    <p class="fragment">Soy sansano! Entré a Telemática el 2005</p>
+                    <p class="fragment">Llevo un par de años trabajando en programación</p>
+                    <p class="fragment">Y ahora trabajo en Mercado Libre como Technical Lead</p>   
                 </section>
 
                 <section>
-                    <h2>Continuous Integration??</h2>
+                    <h1>Continuous Integration <span class="fragment">??</span></h1> 
+                    <aside class="notes">
+                        Pero para entender este concepto primero tenemos que hablar un poco de historia
+                      </aside>
                 </section>
 
                 <section>
@@ -40,88 +42,118 @@
                 <section>
                     <section>
                         <p>
-                            Pedrito era un desarrollador en el 2010, y trabajaba en una empresa que no 
-                                          usaba ningun tipo de
-                            <bold>source code management</bold>
+                            Alice era una desarrolladora en el 2010, y trabajaba en una empresa donde trabajan pocos desarroladores
                         </p>
-                        <!-- 
-                                      Contar sobre como se desarrollaba antes sin GIT o SVN, y como 
-                                      pocas personas tocaba poco código, pero cuando una persona mas entraba al 
-                                      proyecto ya empezaban los problemas
-                                    -->
+                        <aside class="notes">
+                            Contar sobre como se desarrollaba antes sin GIT o SVN, y como 
+                            pocas personas tocaba poco código, pero cuando una persona mas entraba al 
+                            proyecto ya empezaban los problemas
+                          </aside>
+
                     </section>
+                    <section>
+                        <p>
+                            Primer proyecto: Modificar un sitio web para un diario conocido
+                        </p>
+
+                            <img src="./public/newspaper_webpage.gif"/>
+                        <aside class="notes">
+                            Contar sobre como se desarrollaba antes sin GIT o SVN, y como 
+                            pocas personas tocaba poco código, pero cuando una persona mas entraba al 
+                            proyecto ya empezaban los problemas
+                        </aside>
+
+                    </section>
+
+                    <section>
+                        <p>
+                            Tecnologías de punta
+                        </p>
+
+                        <img src="./public/xampp.png"/>
+
+                        <aside class="notes">
+                            - Era una sola persona ene l proyecto, y  teniamos una carpeta compartida
+                            - No trabajabamos con sistemas de control de versiones. Git salió el 2007 , svn el 2000 pero la empresa tuvo progremas para adoptar estas tecnologías
+                            - El desarrollo era trabajar en dicha carpeta y levantar un servidor local a mano. 
+                            - Si alguien tocaba un archivo tenias que gritar que nadie mas lo modificara
+                            - El despliegue era copiar los archivos (que te acordabas que modificaste) uno a uno usando FTP/SSH
+                            - 
+                        </aside>
+                    </section>
+
+                    
 
                     <section>
                         <img src="./public/tenor.gif"/>
                     </section>
 
                     <section>
+                        <h2>
+                            Problemas? Ninguno! 
+                        </h2>
+
+                        <p class="fragment fade-right"> ¿Y si queremos que otras personas trabajen con nosotros?</p>
+                        <p class="fragment fade-right"> ¿Y si queremos desarrollar nuestros cambios por separado?</p>
+                        <p class="fragment fade-right"> ¿Y como podemos guardar el sitio que antes funcionaba?</p>
+                        <p class="fragment fade-right"> ¿Y si no nos acordabamos los archivos que modificamos?</p>
+                        <p class="fragment fade-right"> ¿Y si mi cambio requiere una modificación en la plataforma?</p>
+
+
+                        <aside class="notes">
+                            - Hablar de los contras de este aproach, pero tambien que funcionaba cuando eramos MUY pocos
+                            - El problema real que pasó; Quise agregar una funcionalidad que redimensionara las fotos, PHP lo hacia con una librería, pero necesitaba bibliotecas instaladas en el SO para funcionar. Estabamos trabajando y tenia algo que no habia terminado y se pasó a producció<nav></nav>
+                            - Test? el gerente era el que probaba. 
+                            - Y si lo llevamos a escala? Caso Mercadolibre. 
+                        </aside>
+                    </section>
+
+                    <section>
+
+                        <h2>
+                            Y como lo hacen ellos?
+                        </h2>
+                        <img src="./public/pedidosya.jpg" height="200px"/>
+                        <img src="./public/cornershop.jpg" height="200px"/>
+                        <img src="./public/mercadolibre.jpg" height="200px"/>
+                        <img src="./public/notco.jpg" height="200px"/>
+
+                        <aside class="notes">
+                            - Era una sola persona ene l proyecto, y  teniamos una carpeta compartida
+                            - No trabajabamos con sistemas de control de versiones. Git salió el 2007 , svn el 2000 pero la empresa tuvo progremas para adoptar estas tecnologías
+                            - El desarrollo era trabajar en dicha carpeta y levantar un servidor local a mano. 
+                            - Si alguien tocaba un archivo tenias que gritar que nadie mas lo modificara
+                            - El despliegue era copiar los archivos (que te acordabas que modificaste) uno a uno usando FTP/SSH
+                            - 
+                        </aside>
+                    </section>
+
+                    <section>
                         <p>Historia basada en hechos reales...</p>
                     </section>
 
-                    <section>
-                        <p>mmm.. this is a huge problem</p>
-                    </section>
-
                 </section>
 
                 <section>
-                    <section>
-                        <h3>Continuous Integration</h3>
-                        <blockquote cite="www.martinfowler.com/articles/continuousIntegration.html.Preface">
-                            &ldquo;... a software development practice where members of a team integrate their work frequently, usually each person integrates at least
-                                          daily — leading to multiple integrations per day. Each integration is
-                                          verified by an automated build (including test) to detect integration
-                                          errors as quickly as possible. Many teams find that this approach
-                                          leads to significantly reduced integration problems and allows a team
-                                          to develop cohesive software more rapidly..&rdquo;
-                        </blockquote>
-                    </section>
-                    <section>
-                        <p>
-                          Todos los devs deben compilar el proyecto en sus propias máquinas antes de comitear su código al repositorio 
-                          para asegurarse que sus cambios no rompen nada
-                        </p>
-                        <img src="./public/build-is-broken.png" width="500px"/> 
-                    </section>
-                    <section>
-                        <p>
-                          Los devs deben subir sus cambios al repositorio de código al menos una vez al día
-                        </p>
-                        <img src="./public/in-case-of-fire-1-git-commit-2-git-push-3-leave-building2.png" width="500px"/> 
-                    </section>
-                    <section>
-                        <p>
-                          Compilaciones integradas ocurren varias veces al día en una máquina dedicada.
-                        </p>
-                        <img src="./public/hamster_running.jpg" width="500px"/> 
-                    </section>
-                    <section>
-                        <p>Todos los tests deben correr por cada build</p>
-                        <img src="./public/run-test-ruuuunnn.jpg" width="500px"/> 
-                    </section>
-                    <section>
-                        <p>Se genera un artefacto (ej:war) que puede ser testeado</p>
-                        <img src="./public/mom-throwing-baby.jpg" width="500px"/> 
-                    </section>
-                    <section>
-                        <p>Arreglar compilaciones rotas es la máxima prioridad</p>
-                        <img src="./public/59337eea30636.jpeg" width="500px"/> 
-                        <img />
-                    </section>
-                    <section>
-                        <p>Se pueden generar reportes anexos (coverage, code standards, security checks).</p>
-                        <img src="./public/You_Shall_Not_Pass!_0-1_screenshot.jpg" width="500px"/> 
-                    </section>
+                    <h3>Continuous Integration</h3>
+                    <blockquote cite="https://www.martinfowler.com/articles/continuousIntegration.html">
+                        &ldquo;... a software development practice where members of a team integrate their work frequently, 
+                                    usually each person integrates at least
+                                      daily — leading to multiple integrations per day. Each integration is
+                                      verified by an automated build (including test) to detect integration
+                                      errors as quickly as possible.&rdquo;
+                    </blockquote>
+                    <p>— Martin Fowler</p>
+                    <aside class="notes">
+                        Una práctica de deasrrollo de software donde los miembros de un equipo integran su trabajo frequentemente, usualmente
+                        cada persona integra al menos diariamente, lo que lleva a multiples integraciones por día. Cada integración 
+                        es verificada por armados automáticos (que incluyen tests) para detectar errores en la integración lo antes 
+                        posible. Muchos equipos 
+                    </aside>
                 </section>
-                <section>
-                  <p>An overview</p>
-                  <p>
-                    <img src="./public/ci-book.png" /> 
 
-                  </p>
-                  <small style="font-size: small;">Source: Book <a href="https://www.amazon.com/-/es/Paul-M-Duvall/dp/0321336380">Continuous Integration: Improving Software Quality and Reducing Risk</a></small>
-                </section>
+               
+                
                 <section>
                   <p>Version Control Repository</p>
                   <p style="background-color: white;"> 
@@ -130,17 +162,276 @@
                     <img src="./public/gitlab.png" height="200px"/> 
                   </p>
                 </section>
-                <section data-background-iframe="https://github.com/rodriamaro/ci-cd-presentation" data-background-interactive> </section>
+                <section data-background-iframe="https://github.com/flutter/flutter" data-background-interactive> </section>
 
                 <section>
-                  <p>CI Servers</p>
+                  <p>CI Servers & tools</p>
                   <p> 
                     <img src="./public/ci_servers.png" height="320px"/>
                   </p>
                 </section>
-                <section data-background-iframe="https://github.com/expressjs/express/pulls" data-background-interactive> </section>
+                <section> 
+                    <img src="./public/jenkins.png" height="320px"/> 
+                </section>
 
+                <section>
+                    <p>An overview</p>
+                    <p>
+                      <img src="./public/ci-book.png" /> 
+  
+                    </p>
+                    <small style="font-size: small;">Source: Book <a href="https://www.amazon.com/-/es/Paul-M-Duvall/dp/0321336380">Continuous Integration: Improving Software Quality and Reducing Risk</a></small>
+                  </section>
 
+                  <section>
+                    
+                    <section>
+                        <p>Don´t commit broken code</p>
+                        <aside class="notes">
+                        
+                          Todos los devs deben compilar el proyecto en sus propias máquinas antes de comitear su código al repositorio 
+                          para asegurarse que sus cambios no rompen nada
+                        </aside>
+                        <img src="./public/build-is-broken.png" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Commit code frequently</p>
+                        <aside class="notes">
+                          Los devs deben subir sus cambios al repositorio de código al menos una vez al día
+                        </aside>
+                        <img src="./public/in-case-of-fire-1-git-commit-2-git-push-3-leave-building2.png" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Run private builds</p>
+                        <aside class="notes">
+                          Compilaciones integradas ocurren varias veces al día en una máquina dedicada.
+                        </aside>
+                        <img src="./public/hamster_running.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Write automated developer tests</p>
+                        <aside class="notes">Todos los tests deben correr por cada build</aside>
+                        <img src="./public/run-test-ruuuunnn.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <aside class="notes">Se genera un artefacto (ej:war) que puede ser testeado</aside>
+                        <img src="./public/mom-throwing-baby.jpg" width="500px"/> 
+                    </section>
+                    <section>
+                        <p>Fix broken builds immediately</p>
+                        <aside class="notes">Arreglar compilaciones rotas es la máxima prioridad</aside>
+                        <img src="./public/59337eea30636.jpeg" width="500px"/> 
+                        <img />
+                    </section>
+                    <section>
+                        <p>All tests and inspections must pass</p>
+                        <aside class="notes">Se pueden generar reportes anexos (coverage, code standards, security checks).</aside>
+                        <img src="./public/You_Shall_Not_Pass!_0-1_screenshot.jpg" width="500px"/> 
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Composición de un Pipeline CI</h1>
+                </section>
+
+                <section>
+                
+                    <section>
+                        <h3>Building software</h3>
+                        <p>Example: React App</p>
+                    </section>
+
+                    <section>
+                        <p>package.json</p>
+                        <pre><code class="language-json" data-trim data-noescape data-line-numbers="5-13|14-19">
+                            {
+                                "name": "my-app",
+                                "version": "0.1.0",
+                                "private": true,
+                                "dependencies": {
+                                  "@testing-library/jest-dom": "^5.14.1",
+                                  "@testing-library/react": "^11.2.7",
+                                  "@testing-library/user-event": "^12.8.3",
+                                  "react": "^17.0.2",
+                                  "react-dom": "^17.0.2",
+                                  "react-scripts": "4.0.3",
+                                  "web-vitals": "^1.1.2"
+                                },
+                                "scripts": {
+                                  "start": "react-scripts start",
+                                  "build": "react-scripts build --stats",
+                                  "test": "react-scripts test",
+                                  "eject": "react-scripts eject"
+                                },
+                                "eslintConfig": {
+                                  "extends": [
+                                    "react-app",
+                                    "react-app/jest"
+                                  ]
+                                },
+                                "browserslist": {
+                                  "production": [
+                                    ">0.2%",
+                                    "not dead",
+                                    "not op_mini all"
+                                  ],
+                                  "development": [
+                                    "last 1 chrome version",
+                                    "last 1 firefox version",
+                                    "last 1 safari version"
+                                  ]
+                                }
+                              }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <p>building the app</p>
+                        <pre><code class="language-bash" data-trim data-noescape data-line-numbers="1|2">
+                            npm install
+                            npm run build
+                        </code></pre>
+                    </section>
+                    <section>
+                        <img src="./public/react-build-folder.png" /> 
+                    </section>
+                    <section>
+                        <p>Pero nuestro ambiente necesita NodeJS!</p>
+                        <p class="fragment"><img src="./public/docker-rescue.jpg" /> </p>
+                    </section>
+                    <section>
+                        <p>building the app with docker</p>
+                        <pre><code class="language-dockerfile" data-trim data-noescape data-line-numbers="1|2|3|4|5|6">
+                            FROM node:14-alpine
+                            RUN mkdir /app
+                            WORKDIR /app
+                            COPY . /app/
+                            RUN npm install
+                            RUN npm run build
+                        </code></pre>
+                        <pre><code class="language-bash" data-trim data-noescape data-line-numbers="1">
+                            docker build -t react-app .
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Testing software</h3>
+                    </section>
+                    <section>
+                        <p>testing the app</p>
+                        <pre><code class="language-bash" data-trim data-noescape data-line-numbers="1|2">
+                            npm run test
+                            npm run e2e
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Run validations</h3>
+                    </section>
+                    <section>
+                        <p>EsLint<pre><code class="language-javascript" data-trim data-noescape >
+                            module.exports = {
+                                env: {
+                                  browser: true,
+                                  es2021: true,
+                                  jest: true
+                                },
+                                extends: [
+                                  'plugin:react/recommended',
+                                  'airbnb',
+                                ],
+                                parserOptions: {
+                                  ecmaFeatures: {
+                                    jsx: true,
+                                  },
+                                  ecmaVersion: 12,
+                                  sourceType: 'module',
+                                },
+                                plugins: [
+                                  'react',
+                                ],
+                                rules: {
+                                  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+                                }
+                              };
+                              
+                        </code></pre>
+                        <pre><code class="language-bash" data-trim data-noescape >
+                            npm run lint
+                        </code></pre></p>
+                    </section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### Otros tipos de checks
+                            - Detección de código duplicado.
+                            - Falta de pruebas unitarias, falta de comentarios.
+                            - Código spaghetti, complejidad ciclomática, alto acoplamiento.
+                            - Tamaño de archivos de código.
+                            - Tamaño de métodos.
+                            - No adecuación a estándares y convenciones de código.
+                            - Vulnerabilidades conocidas de seguridad.
+                          </script>
+                    </section>
+                    <section data-background-iframe="https://www.sonarqube.org/" data-background-interactive> </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Generating the artifact</h3>
+                    </section>
+                    <section>
+                        <h3>Using docker</h3>
+                        <pre><code class="language-dockerfile" data-trim data-noescape>
+                            FROM nginx:1.15
+                            COPY /app/build/ /usr/share/nginx/html
+                            COPY /nginx.conf /etc/nginx/conf.d/default.conf
+                        </code></pre>
+                        <pre><code class="language-bash" data-trim data-noescape >
+                            docker build -t react-app .
+                            docker tag react-app mycompany/react-app-demo:0.0.1
+                            docker push
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Valor de CI</h2>
+                    </section>
+                    <section>
+                        <p>Reduce risk</p>
+                        <p class="fragment">Reduce repetitive manual processes</p>
+                        <p class="fragment">Generate deployable software at any time and at any place</p>
+                        <p class="fragment">Enable better project visibility</p>
+                        <p class="fragment">Establish greater confidence in the software product from the
+                            development team</p>
+                    </section>
+                </section>
+                <section>
+                    <h2>Continuous integration vs. continuous delivery vs. continuous deployment </h2>
+                </section>
+                <section>
+                    <h2>Continuous integration</h2>
+                   <p>Integrar tu codigo continuamente</p> 
+                </section>
+                <section>
+                    <h2>Continuous delivery</h2>
+                    <p>Integrar tu codigo continuamente <b style="color: blue;">y además generar artefactos que pueden ser deployados en cualquier momento</b></p> 
+                </section>
+                <section>
+                    <h2>Continuous delivery</h2>
+                    <p>Integrar tu codigo continuamente y además generar artefactos que pueden ser deployados en cualquier momento <b style="color: blue;">de manera automática</b></p> 
+                </section>
+                <section>
+                    <img style="background-color: white;" src="./public/cicd-lifecycle.png" height="600px"/> 
+                    <br/>
+                    <small style="font-size: small;"><a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment">https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment</a></small>
+                </section>
+                <section>
+                    <h2>Release process</h2>
+                </section>
+                <section>
+                    <p><img src="./public/ci-cd-process.png" /> </p> 
+                </section>
             </div>
         </div>
         <script type="module" src="/main.js"></script>
