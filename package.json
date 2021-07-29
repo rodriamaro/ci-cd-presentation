@@ -5,7 +5,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "test": "mocha",
-    "broken-links" : "blc http://localhost:8080 -rvf --filter-level 3"
+    "broken-links": "blc http://localhost:8080 -rvf --filter-level 3"
   },
   "devDependencies": {
     "broken-link-checker": "^0.7.8",
